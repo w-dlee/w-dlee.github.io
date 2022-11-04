@@ -212,10 +212,10 @@
 <section class="section">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
-            <!-- <div class="column is-four-fifths">
+            <!-- <div class="column is-four-fifths"> -->
                 <!-- <h2 class="title is-3">Teaser</h2> -->
                 <img src="./source/teaser.png">
-            </div> -->
+            <!-- </div> -->
         </div>
     </div>
 </section>
@@ -268,13 +268,11 @@
       <div class="column is-full-width">
         <!-- <h2 class="title is-3">Animation</h2> -->
 
-        <!-- Video Adaptaion. -->
-        <h3 class="title is-4">GAN Inversion and Video Adaptaion</h3>
+        <!-- Supplementary Video. -->
+        <h3 class="title is-4">Supplementary Video</h3>
         <div class="content has-text-justified">
           <p>
-            Our video adaptation method uses a pre-trained image encoder, 
-            <a href="https://arxiv.org/abs/2102.02766">e4e</a>, and finetunes the pre-trained StyleGAN model 
-            to invert the video. We then employ latent-based editing techniques to edit the video.
+            TBD
           </p>
         </div>
         <div class="content has-text-centered">
@@ -288,12 +286,11 @@
         <!-- Video Adaptaion. -->
         
 
-        <!-- Video Editing and Expression Dynamics Optimization. -->
-        <h3 class="title is-4">Expression Dynamics Optimization</h3>
+        <!-- Results. -->
+        <h3 class="title is-4">Results</h3>
         <div class="content has-text-justified">
           <p>
-            We additionally optimize the latent codes of StyleGAN to suprress unwanted 
-            changes that may occur during the expression editing in the video. 
+            (All the results are generated without human intervention.)
           </p>
         </div>
         <div class="content has-text-centered">
@@ -304,7 +301,23 @@
             <source src="assets/edo-11.mp4" type="video/mp4">
           </video>
         </div>
-        <!-- Expression Dynamics Optimization. -->
+        
+        <!-- UI for customizing. -->
+        <h3 class="title is-4">UI for customizing</h3>
+        <div class="content has-text-justified">
+          <p>
+            TBD
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video" autoplay controls muted loop playsinline width="75%">
+            <source src="assets/edo-10.mp4" type="video/mp4">
+          </video>
+          <video id="replay-video" autoplay controls muted loop playsinline width="75%">
+            <source src="assets/edo-11.mp4" type="video/mp4">
+          </video>
+        </div>
+        
       </div>
     </div>
     <!--/ Animation. -->
