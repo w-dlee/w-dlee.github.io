@@ -1,1 +1,500 @@
-ctp
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PopStage">
+  <!-- <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PopStage: The Generation of Stage Cross-Editing Video based on Spatio-Temporal Matching</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- favicon -->
+  <!-- <link rel="icon" href="./static/images/xxx.png"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://xxxxx.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PopStage: The Generation of Stage Cross-Editing Video based on Spatio-Temporal Matching</h1>
+          
+          <!-- Authors -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://">Dawon Lee</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://">Jung Eun Yoo</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://">Kyungmin Cho</a><sup>1,</sup><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://">Bumki Kim</a><sup>1,</sup><sup>3</sup>,
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://">Gyeonghun Im</a><sup>1,</sup><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://vml.kaist.ac.kr/main/people/person/1">Junyong Noh</a><sup>1</sup>
+            </span>
+          </div>
+          <!-- Authors -->
+
+          <!-- Affiliation -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>KAIST Visual Media Lab,</span>
+            <span class="author-block"><sup>2</sup>Anigma Technologies,</span>
+            <span class="author-block"><sup>3</sup>KAI Inc.</span>
+          </div>
+          <!-- Affiliation -->
+
+          <h1 style="font-size:23px;font-weight:bold">ACM Transactions on Graphics (TOG), SIGGRAPH ASIA 2022</h1>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://dl.acm.org/doi/pdf/10.1145/3550454.3555467"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="https://xxxxxxxxx.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="hero is-light is-small"> -->
+<!-- <section class="hero is-light is-small">
+    <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/va-00.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/edo-00.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/va-01.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/va-02.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/edo-01.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/va-03.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- Teaser -->
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <!-- <div class="column is-four-fifths"> -->
+            <div class="column is-full-width">
+                <!-- <h2 class="title is-3">Teaser</h2> -->
+                <img src="./source/teaser.png">
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+</section>
+
+
+<!-- Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            StageMix is a mixed video that is created by concatenating the segments from various performance videos of an identical song in a visually smooth manner by matching the main subject’s silhouette presented in the frame.
+            We introduce PopStage, which allows users to generate a StageMix automatically.
+            PopStage is designed based on the StageMix Editing Guideline that we established by interviewing creators as well as observing their workflows.
+            PopStage consists of two main steps: finding an editing path and generating a transition effect at a transition point.
+            Using a reward function that favors visual connection and the optimality of transition timing across the videos, we obtain the optimal path that maximizes the sum of rewards through dynamic programming.
+            Given the optimal path, PopStage then aligns the silhouettes of the main subject from the transitioning video pair to enhance the visual connection at the transition point.
+            The virtual camera view is next optimized to remove the black areas that are often created due to the transformation needed for silhouette alignment, while reducing pixel loss.
+            In this process, we enforce the view to be the maximum size while maintaining the temporal continuity across the frames.
+            Experimental results show that PopStage can generate a StageMix of a similar quality to those produced by professional creators in a highly reduced production time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+</section>
+<!--/ Abstract. -->
+  
+
+  
+<!-- Paper video. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Supplementary Video</h2>
+        
+        
+        <!-- 01. Description. -->
+        <div class="content has-text-justified">
+          <h3 class="title is-4">01. Description</h3>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/0ec_76PKN-w;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        <!--/ 01. Description. -->
+        
+        
+        <!-- 02. Results. -->
+        <!--/ 02. Results. -->
+        
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Paper video. -->
+  
+  
+  
+  
+
+  
+
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">02. Results</h2>
+      <p>
+        All the results are generated without any human intervention.
+      </p>
+    
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-5">🎵 BLACKPINK - As If It's Your Last (7 inputs)</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+      <hr>
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-5">🎵 JENNIE - SOLO (6 inputs)</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+    </div>
+    <hr>
+    
+    
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-5">🎵 BLACKaaaaa</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+      <hr>
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-5">🎵 bbbbb</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+    </div>
+    <hr>
+    
+  </div>
+</section>
+  
+
+  
+  
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">03. Comparison with creators</h2>
+      <p>
+        All the results are generated without any human intervention.
+        🎵 BLACKPINK - As If It's Your Last (7 inputs)
+      </p>
+    
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-5">PopStage</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+      <hr>
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-5">Creator 1</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+    </div>
+    <hr>
+    
+    
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-5">Creator 2</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+      <hr>
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-5">Creator 3</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+    </div>
+    <hr>
+    
+  </div>
+</section>
+
+  
+  
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">04. UI for customizing</h2>
+      <p>
+        All the results are generated without any human intervention.
+      </p>
+
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/MJQmSgP2_3g;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+
+  </div>
+</section>
+  
+  
+  
+  
+  
+  
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        We referred to the project page of <a href="https://nerfies.github.io/">Nerfies</a> when creating this page.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
