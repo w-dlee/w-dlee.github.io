@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="CTP">
+  <!-- <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OptiSub: Optimizing Video Subtitle Presentation for Varied Display and Font Sizes via Speech Pause-Driven Chunking</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- favicon -->
+  <!-- <link rel="icon" href="./static/images/xxx.png"> -->
+  <link rel="icon" href="./source/favicon.png">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">OptiSub: Optimizing Video Subtitle Presentation for Varied Display and Font Sizes via Speech Pause-Driven Chunking</h1>
+
+          <!-- Authors -->
+<!--           <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://w-dlee.github.io/">Dawon Lee</a><sup>1</sup>,</span>
+            <span class="author-block">
+              Sunjun Kim<sup>2</sup>,</span>
+            <span class="author-block">
+              Junyong Noh<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Byungjoo Lee<sup>3</sup>
+            </span>
+          </div> -->
+          <!-- Authors -->
+
+          <!-- Affiliation -->
+<!--           <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>KAIST,</span>
+            <span class="author-block"><sup>2</sup>DGIST,</span>
+            <span class="author-block"><sup>3</sup>Yonsei University</span>
+          </div> -->
+          <!-- Affiliation -->
+
+          <h1 style="font-size:23px;font-weight:bold">CHI 2025 (under review)</h1>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://dl.acm.org/doi/xxxxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (To appear)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper video. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+<!--         <h2 class="title is-3">Supplementary Video</h2>
+         -->
+        
+        <!-- FF Video -->
+        <div class="content has-text-justified">
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/Uog-qf8GKw4?si=v8Ym_n6XYLynWEu-"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+        <!--/ FF Video -->
+       
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Paper video. -->
+
+
+<!-- Teaser -->
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <!-- <div class="column is-four-fifths"> -->
+            <div class="column is-full-width">
+                <!-- <h2 class="title is-3">Teaser</h2> -->
+                <img src="./source/teaser_optisub.png">
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+</section>
+<!-- /Teaser -->
+
+
+  
+<!-- Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Viewers desire to watch video content with subtitles in various font sizes according to their viewing environment and personal preferences. Unfortunately, because a chunk of the subtitle—a segment of the text corpus displayed on the screen at once—is typically constructed based on one specific font size, text truncation or awkward line breaks can occur when different font sizes are utilized. While existing methods address this problem by reconstructing subtitle chunks based on maximum character counts, they overlook synchronization of the subtitle with the content, often causing the occurrence of misaligned text. We introduce OptiSub, a fully automated system that optimizes subtitle segmentation to fit any font size while ensuring synchronization with the content. Our system leverages the timing of speech pauses within the video for synchronization. Experimental results, including a user study comparing OptiSub with previous methods, demonstrate its effectiveness and practicality across diverse font sizes and input videos.
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+</section>
+<!--/ Abstract. -->
+  
+
+
+  
+  
+  
+  
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        We referred to the project page of <a href="https://nerfies.github.io/">Nerfies</a> when creating this page.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
