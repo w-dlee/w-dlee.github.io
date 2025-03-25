@@ -29,8 +29,8 @@ description: >-
   My ultimate research goal is to provide an enhanced content experience for people. If you'd like to talk with me, feel free to contact me (dawon.lee@kaist.ac.kr)!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "w-dlee.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: d
-github_username: w-dlee
+twitter_username: 
+github_username: 
 google_scholar: YbGkYHYAAAAJ
 google_analytics: G-MFWSBLRKG0
 
