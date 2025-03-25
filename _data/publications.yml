@@ -8,8 +8,11 @@
   image_mouseover: 
   authors:
     - minsun
-    - dawon *
-    - junyong*
+    - dawon
+    - junyong
+  co_corresponding_authors:
+    - dawon
+    - junyong
    
 - id: optisub
   title: "OptiSub: Optimizing Video Subtitle Presentation for Varied Display and Font Sizes via Speech Pause-Driven Chunking"
