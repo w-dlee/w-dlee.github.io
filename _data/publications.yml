@@ -4,7 +4,7 @@
   description: ""
   project_page: https://w-dlee.github.io/highlights
   arxiv: 
-  image: ./images/teaser_highlights
+  image: teaser_highlights.png
   image_mouseover: 
   authors:
     - minsun
@@ -20,7 +20,7 @@
   description: ""
   project_page: https://w-dlee.github.io/optisub
   arxiv: 
-  image: 
+  image: teaser_optisub.png
   image_mouseover: 
   authors:
     - dawon
@@ -33,7 +33,7 @@
   description: ""
   project_page: https://w-dlee.github.io/ctp
   arxiv: 
-  image: 
+  image: teaser_ctp.png
   image_mouseover: 
   authors:
     - dawon
