@@ -1,5 +1,5 @@
 - id: illuminerf
-  title: "IllumiNeRF 3D Relighting without Inverse Rendering"
+  title: "AAAAAAAAAIllumiNeRF 3D Relighting without Inverse Rendering"
   venue: NeurIPS, 2024
   description: "3D relighting by distilling samples from a 2D image relighting diffusion model into a latent-variable NeRF."
   project_page: https://illuminerf.github.io
