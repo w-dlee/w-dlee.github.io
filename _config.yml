@@ -23,17 +23,10 @@ name: Dawon Lee
 position: Postdoctoral Researcher 
 email: dawon.lee@kaist.ac.kr
 description: >-
-  I am a postdoctoral researcher at KAIST's [Visual Media Lab](vml.kaist.ac.kr), supervised by Prof. Junyong Noh.
+  I am a postdoctoral researcher at KAIST's [Visual Media Lab](https://vml.kaist.ac.kr), supervised by Prof. Junyong Noh.
   My research interests span across the fields of human-computer interaction (HCI), computer graphics (CG), and multimedia.
   I focus on reseraching challenges in content creation and consumption, aiming to define these problems and develop technologies to solve them.
   My ultimate research goal is to provide an enhanced content experience for people. If you'd like to talk with me, feel free to contact me (dawon.lee@kaist.ac.kr)!
-
-  # I aSSSSSSSSSSSSm a researcher in 3D computer vision and generative AI. I currently co-lead the development of spatial intelligence at [World Labs](https://www.worldlabs.ai/blog).
-  # I was previously a research scientist at [Google](https://ai.google/research/) where I built technology to [generate 3D assets](https://blog.google/products/shopping/search-on-2022-shopping/) for products on Google Search.
-
-  # I received my Ph.D from the [University of Washington](https://grail.cs.washington.edu/) in 2021 where I was advised by
-  # [Ali Farhadi](https://homes.cs.washington.edu/~ali/) and
-  # [Steve Seitz](https://homes.cs.washington.edu/~seitz/).
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "w-dlee.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: d
