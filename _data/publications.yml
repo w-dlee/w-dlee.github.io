@@ -13,7 +13,7 @@
    
 - id: optisub
   title: "OptiSub: Optimizing Video Subtitle Presentation for Varied Display and Font Sizes via Speech Pause-Driven Chunking"
-  venue: CHI, 2024
+  venue: CHI, 2025
   description: ""
   project_page: https://w-dlee.github.io/optisub
   arxiv: 
@@ -23,3 +23,19 @@
     - dawon
     - jongwoo
     - junyong
+
+- id: ctp
+  title: "User Performance in Consecutive Temporal Pointing: An Exploratory Study"
+  venue: CHI, 2024
+  description: ""
+  project_page: https://w-dlee.github.io/ctp
+  arxiv: 
+  image: 
+  image_mouseover: 
+  authors:
+    - dawon
+    - sunjun
+    - junyong
+    - byungjoo
+
+  
