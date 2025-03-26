@@ -38,34 +38,18 @@
     - junyong
     - byungjoo
 
-- id: popstage
-  title: "PopStage: The Generation of Stage Cross-Editing Video Based on Spatio-Temporal Matching"
-  venue: Journal: Transactions on Graphics (TOG) | Conference: SIGGRAPH Asia 2022 
-  description: ""
-  project_page: https://w-dlee.github.io/popstage
-  arxiv: 
-  image: 
-  image_mouseover: 
-  authors:
-    - dawon
-    - kyungmin
-    - bumki
-    - gyeonghun
-    - junyong
-    
 
-- id: camerawork
-  title: "Virtual Camera Layout Generation using a Reference Video"
-  venue: CHI 2021
+- id: ctp2
+  title: "22User Performance in Consecutive Temporal Pointing: An Exploratory Study"
+  venue: CHI, 2024
   description: ""
-  project_page: https://vml.kaist.ac.kr/main/international/individual/173
+  project_page: https://w-dlee.github.io/ctp
   arxiv: 
   image: 
   image_mouseover: 
   authors:
-    - kwanggyoon
-    - sanghun
-    - jaedong
     - dawon
+    - sunjun
     - junyong
+    - byungjoo
 
