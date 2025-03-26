@@ -3,7 +3,8 @@
   venue: CHI 2025
   description: ""
   project_page: https://w-dlee.github.io/highlights
-  image: 
+  arxiv:
+  image: teaser_highlights.png 
   image_mouseover: 
   authors:
     - minsun
@@ -16,7 +17,7 @@
   description: ""
   project_page: https://w-dlee.github.io/optisub
   arxiv: 
-  image: reconfusion_before.png
+  image: teaser_optisub.png
   image_mouseover: reconfusion_after.mp4
   authors:
     - dawon
