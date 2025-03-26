@@ -8,8 +8,8 @@
   image_mouseover: 
   authors:
     - minsun
-    - dawon *
-    - junyong*
+    - dawon
+    - junyong
    
 - id: optisub
   title: "OptiSub: Optimizing Video Subtitle Presentation for Varied Display and Font Sizes via Speech Pause-Driven Chunking"
@@ -38,9 +38,9 @@
     - junyong
     - byungjoo
 
-- id: kkk
+- id: popstage
   title: "JJJJJJ"
-  venue: SIGGRAPH, 2024
+  venue: SIGGRAPH 2024
   description: ""
   project_page: https://w-dlee.github.io/ctp
   arxiv: 
@@ -49,4 +49,14 @@
   authors:
     - dawon
 
+- id: camerawork
+  title: "JJJJJJ"
+  venue: CHI 2022
+  description: ""
+  project_page: https://w-dlee.github.io/ctp
+  arxiv: 
+  image: 
+  image_mouseover: 
+  authors:
+    - dawon
 
