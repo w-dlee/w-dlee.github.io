@@ -5,7 +5,7 @@
   project_page: https://w-dlee.github.io/highlights
   arxiv:
   image: teaser_highlights.png 
-  image_mouseover: 
+  image_mouseover: teaser_highlights.png 
   authors:
     - minsun
     - dawon
@@ -18,7 +18,7 @@
   project_page: https://w-dlee.github.io/optisub
   arxiv: 
   image: teaser_optisub.png
-  image_mouseover: reconfusion_after.mp4
+  image_mouseover: teaser_optisub.png
   authors:
     - dawon
     - jongwoo
@@ -30,8 +30,8 @@
   description: ""
   project_page: https://w-dlee.github.io/ctp
   arxiv: 
-  image: 
-  image_mouseover: 
+  image: teaser_ctp.png
+  image_mouseover: teaser_ctp.png
   authors:
     - dawon
     - sunjun
@@ -44,8 +44,8 @@
   description: ""
   project_page: https://w-dlee.github.io/popstage
   arxiv: 
-  image: 
-  image_mouseover: 
+  image: teaser_popstage.png
+  image_mouseover: teaser_popstage.png
   authors:
     - dawon
     - jungeun
