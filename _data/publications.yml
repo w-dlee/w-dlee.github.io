@@ -1,24 +1,24 @@
 - id: highlights
-  title: "AGenerating Highlight Videos of a User-Specified Length using Most Replayed Data"
-  venue: CHI 2025
+  title: "Generating Highlight Videos of a User-Specified Length using Most Replayed Data"
+  venue: CHI, 2025
   description: ""
   project_page: https://w-dlee.github.io/highlights
   arxiv: 
-  image: teaser_highlights.png
+  image: 
   image_mouseover: 
   authors:
     - minsun
-    - dawon
-    - junyong
-
+    - dawon *
+    - junyong*
+   
 - id: optisub
   title: "OptiSub: Optimizing Video Subtitle Presentation for Varied Display and Font Sizes via Speech Pause-Driven Chunking"
-  venue: CHI 2025
+  venue: CHI, 2025
   description: ""
   project_page: https://w-dlee.github.io/optisub
   arxiv: 
-  image: teaser_optisub.png
-  image_mouseover: 
+  image: reconfusion_before.png
+  image_mouseover: reconfusion_after.mp4
   authors:
     - dawon
     - jongwoo
@@ -26,11 +26,11 @@
 
 - id: ctp
   title: "User Performance in Consecutive Temporal Pointing: An Exploratory Study"
-  venue: CHI 2024
+  venue: CHI, 2024
   description: ""
   project_page: https://w-dlee.github.io/ctp
   arxiv: 
-  image: teaser_ctp.png
+  image: 
   image_mouseover: 
   authors:
     - dawon
@@ -38,34 +38,4 @@
     - junyong
     - byungjoo
 
-- id: popstage
-  title: "PopStage: The Generation of Stage Cross-Editing Video Based on Spatio-Temporal Matching"
-  venue: Journal: Transactions on Graphics (TOG) | Conference: SIGGRAPH Asia 2022
-  description: ""
-  project_page: https://w-dlee.github.io/popstage
-  arxiv: 
-  image: 
-  image_mouseover: 
-  authors:
-    - dawon
-    - jungeun
-    - kyungmin
-    - bumki
-    - gyeonghun
-    - junyong
-
-- id: camerawork
-  title: "Virtual Camera Layout Generation using a Reference Video"
-  venue: CHI 2021
-  description: ""
-  project_page: https://vml.kaist.ac.kr/main/international/individual/173
-  arxiv: 
-  image: 
-  image_mouseover: 
-  authors:
-    - jungeun
-    - kwanggyoon
-    - sanghun
-    - jaedong
-    - dawon
-    - junyong
+  
