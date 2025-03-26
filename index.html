@@ -136,12 +136,15 @@ layout: null
             
                 {% if publication.corresponding_authors contains author_id %}
                   <span class="author-co-corresponding">*</span>  <!-- corresponding author에 * 추가 -->
-                  {% assign corresponding_authors = corresponding_authors | append: author.first_name | append: " " | append: author.last_name | append: ", " %}
+                  {% assign corresponding_authors = corresponding_authors | append: author.first_name | append: " " | append: author.last_name %}
+                  {% if forloop.last == false %}
+                    {% assign corresponding_authors = corresponding_authors | append: ", " %}
+                  {% endif %}
                 {% endif %}
               {% endfor %}
             
               {% if corresponding_authors != "" %}
-                <span>(* Co-corresponding authors)</span>
+                <span>(* co-corresponding authors)</span>
               {% endif %}
             </div>
             <div class="publication-venue">
