@@ -53,31 +53,26 @@ layout: null
           <div class="content has-text-justified">
             {{ site.description | markdownify }}
             <div class="buttons">
-              <a class="external-link button is-light" href="cv.pdf">
+              <a class="external-link button is-light" href="cv.html">
                 <span class="icon"><i class="fas fa-file"></i></span>
                 <span>CV</span>
               </a>
 
-              <a class="external-link button is-light" href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
-                <span class="icon"><i class="fab fa-linkedin"></i></span>
-                <span>LinkedIn</span>
-              </a>
-              
               <a class="external-link button is-light"
                 href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
                 <span class="icon"><i class="ai ai-google-scholar"></i></span>
                 <span>Scholar</span>
               </a>
 
-<!--               <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}">
+              <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}">
                 <span class="icon"><i class="fab fa-github"></i></span>
                 <span>Github</span>
-              </a> -->
+              </a>
 
-<!--               <a class="external-link button is-light" href="https://twitter.com/{{ site.twitter_username }}">
+              <a class="external-link button is-light" href="https://twitter.com/{{ site.twitter_username }}">
                 <span class="icon"><i class="fab fa-twitter"></i></span>
                 <span>Twitter</span>
-              </a> -->
+              </a>
             </div>
 
           </div>
@@ -127,33 +122,24 @@ layout: null
         <div class="column">
           <div class="content">
             <h3 class="publication-title"><a href="{{ publication.project_page }}">{{ publication.title }}</a></h3>
-           <div class="publication-authors">
-            {% for author_id in publication.authors %}
+            <div class="publication-authors">
+              {% for author_id in publication.authors %}
               {% assign author = site.data.authors[author_id] %}
               <span class="author-block {% if author.is_me %}author-me{% endif %}">
                 {% if author.is_me %}
-                  {{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}{% if forloop.last == false %},{% endif %}
+                {{ author.first_name }} {{author.middle_name}} {{ author.last_name }}{% if forloop.last == false %},{%
+                endif %}
                 {% else %}
-                  <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}</a>{% if forloop.last == false %},{% endif %}
+                <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name
+                  }}</a>{% if forloop.last == false %},{% endif %}
                 {% endif %}
               </span>
-            {% endfor %}
-          
-            {% if publication.co_corresponding_authors %}
-              {% for co_author_id in publication.co_corresponding_authors %}
-                {% assign co_author = site.data.authors[co_author_id] %}
-                <span class="author-co-corresponding">
-                  {{ co_author.first_name }} {{ co_author.middle_name }} {{ co_author.last_name }}*
-                  {% if forloop.last == false %},{% endif %}
-                </span>
               {% endfor %}
-              <span class="co-corresponding-note">(*co-corresponding authors)</span>
-            {% endif %}
-          </div>
+            </div>
             <div class="publication-venue">
               <span>{{ publication.venue }}</span>
               {% for award in publication.awards %}
-                <span class="publication-venue-emph">{{ award }}</span>
+                <span class="publication-venue-emph">{{ award }}<span>
               {% endfor %}
             </div>
             <p class="publication-description">{{ publication.description }}</p>
