@@ -157,10 +157,16 @@ layout: null
             <p class="publication-description">{{ publication.description }}</p>
             <!-- Publication Links. -->
             <div class="publication-links buttons field has-addons">
-              <a class="external-link button is-small is-ghost" href="{{ publication.project_page }}">
+              {% if publication.project_page %}
+                <a class="external-link button is-small is-ghost" href="{{ publication.project_page }}">
+                  <span class="icon"><i class="fas fa-globe-asia"></i></span>
+                  <span>Project Page</span>
+                </a>
+              {% endif %}
+<!--               <a class="external-link button is-small is-ghost" href="{{ publication.project_page }}">
                 <span class="icon"><i class="fas fa-globe-asia"></i></span>
                 <span>Project Page</span>
-              </a>
+              </a> -->
 <!--               <a class="external-link button is-small is-ghost" href="https://arxiv.org/pdf/{{ publication.arxiv }}.pdf">
                 <span class="icon"><i class="fas fa-file-pdf"></i></span>
                 <span>PDF</span>
@@ -201,9 +207,6 @@ layout: null
       <div class="columns is-centered has-text-centered">
         <div class="column is-8">
           <div class="content">
-            <p>
-              Feel free to <a href="https://github.com/keunhong/keunhong.github.io">borrow this template</a>.
-            </p>
           </div>
         </div>
       </div>
