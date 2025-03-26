@@ -1,5 +1,5 @@
 - id: highlights
-  title: "KKK Generating Highlight Videos of a User-Specified Length using Most Replayed Data"
+  title: "a Generating Highlight Videos of a User-Specified Length using Most Replayed Data"
   venue: CHI, 2025
   description: ""
   project_page: https://w-dlee.github.io/highlights
@@ -50,6 +50,9 @@
     - dawon
     - jungeun
     - kyungmin
+    - bumki
+    - gyeonghun
+    - junyong
     
 
 - id: camerawork
@@ -61,6 +64,7 @@
   image: 
   image_mouseover: 
   authors:
+    - jungeun
     - kwanggyoon
     - sanghun
     - jaedong
