@@ -123,22 +123,25 @@ layout: null
           <div class="content">
             <h3 class="publication-title"><a href="{{ publication.project_page }}">{{ publication.title }}</a></h3>
             <div class="publication-authors">
+              {% assign corresponding_authors = "" %}
               {% for author_id in publication.authors %}
-              {% assign author = site.data.authors[author_id] %}
-              <span class="author-block {% if author.is_me %}author-me{% endif %}">
-                {% if author.is_me %}
-                {{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}{% if forloop.last == false %},{% endif %}
-                {% else %}
-                <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}</a>{% if forloop.last == false %},{% endif %}
+                {% assign author = site.data.authors[author_id] %}
+                <span class="author-block {% if author.is_me %}author-me{% endif %}">
+                  {% if author.is_me %}
+                    {{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}
+                  {% else %}
+                    <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}</a>
+                  {% endif %}
+                </span>
+            
+                {% if publication.corresponding_authors contains author_id %}
+                  <span class="author-co-corresponding">*</span>  <!-- corresponding author에 * 추가 -->
+                  {% assign corresponding_authors = corresponding_authors | append: author.first_name | append: " " | append: author.last_name | append: ", " %}
                 {% endif %}
-              </span>
               {% endfor %}
             
-              {% if publication.co_corresponding_authors %}
-                {% for co_author_id in publication.co_corresponding_authors %}
-                {% assign co_author = site.data.authors[co_author_id] %}
-                <span class="author-co-corresponding">(co-corresponding)</span>
-                {% endfor %}
+              {% if corresponding_authors != "" %}
+                <span>(*co-corresponding authors)</span>
               {% endif %}
             </div>
             <div class="publication-venue">
