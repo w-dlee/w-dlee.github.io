@@ -40,8 +40,7 @@
 
 
 - id: popstage
-  title: "PopStage: The Generation of Stage Cross-Editing Video Based on Spatio-Temporal Matching
-"
+  title: "PopStage: The Generation of Stage Cross-Editing Video Based on Spatio-Temporal Matching"
   venue: Transactions on Graphics (TOG), SIGGRAPH Asia 2022
   description: ""
   project_page: https://w-dlee.github.io/popstage
