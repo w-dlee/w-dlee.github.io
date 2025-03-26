@@ -10,10 +10,7 @@
     - minsun
     - dawon
     - junyong
-  co_corresponding_authors:
-    - dawon
-    - junyong
-   
+
 - id: optisub
   title: "OptiSub: Optimizing Video Subtitle Presentation for Varied Display and Font Sizes via Speech Pause-Driven Chunking"
   venue: CHI 2025
