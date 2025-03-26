@@ -134,11 +134,13 @@ layout: null
                 </span>
               {% endfor %}
             
-              {% assign co_corresponding_authors = publication.co_corresponding_authors %}
-              {% if co_corresponding_authors %}
-                {% for co_author_id in co_corresponding_authors %}
+              {% assign corresponding_authors = publication.corresponding_authors %}
+              {% if corresponding_authors %}
+                {% for co_author_id in corresponding_authors %}
                   {% assign co_author = site.data.authors[co_author_id] %}
-                  <span class="author-co-corresponding">*</span>
+                  <span class="author-co-corresponding">
+                    {{ site.data.authors[co_author_id].first_name }} {{ site.data.authors[co_author_id].middle_name }} {{ site.data.authors[co_author_id].last_name }}*
+                  </span>
                 {% endfor %}
                 <span> (*co-corresponding authors)</span>
               {% endif %}
