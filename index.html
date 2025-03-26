@@ -122,37 +122,28 @@ layout: null
         <div class="column">
           <div class="content">
             <h3 class="publication-title"><a href="{{ publication.project_page }}">{{ publication.title }}</a></h3>
-           <div class="publication-authors">
-            {% assign authors_with_stars = "" %}
-            {% for author_id in publication.authors %}
-              {% assign author = site.data.authors[author_id] %}
-              <span class="author-block {% if author.is_me %}author-me{% endif %}">
-                {% if author.is_me %}
-                  {{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}{% if forloop.last == false %},{% endif %}
-                {% else %}
-                  <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}</a>{% if forloop.last == false %},{% endif %}
-                {% endif %}
-              </span>
-              {% assign authors_with_stars = authors_with_stars | append: " " | append: author_id %}
-            {% endfor %}
-          
-            {% assign corresponding_authors = publication.corresponding_authors %}
-            {% if corresponding_authors %}
-              {% for co_author_id in corresponding_authors %}
-                {% assign co_author = site.data.authors[co_author_id] %}
-                {% if authors_with_stars contains co_author_id %}
-                  <span class="author-co-corresponding">
-                    {{ site.data.authors[co_author_id].first_name }} {{ site.data.authors[co_author_id].middle_name }} {{ site.data.authors[co_author_id].last_name }}*
-                  </span>
-                {% else %}
-                  <span class="author-co-corresponding">
-                    {{ site.data.authors[co_author_id].first_name }} {{ site.data.authors[co_author_id].middle_name }} {{ site.data.authors[co_author_id].last_name }}
-                  </span>
+            <div class="publication-authors">
+              {% assign corresponding_authors = "" %}
+              {% for author_id in publication.authors %}
+                {% assign author = site.data.authors[author_id] %}
+                <span class="author-block {% if author.is_me %}author-me{% endif %}">
+                  {% if author.is_me %}
+                    {{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}
+                  {% else %}
+                    <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}</a>
+                  {% endif %}
+                </span>
+            
+                {% if publication.corresponding_authors contains author_id %}
+                  <span class="author-co-corresponding">*</span>  <!-- corresponding author에 * 추가 -->
+                  {% assign corresponding_authors = corresponding_authors | append: author.first_name | append: " " | append: author.last_name | append: ", " %}
                 {% endif %}
               {% endfor %}
-              <span> (*co-corresponding authors)</span>
-            {% endif %}
-          </div>
+            
+              {% if corresponding_authors != "" %}
+                <span>(*co-corresponding authors)</span>
+              {% endif %}
+            </div>
             <p class="publication-description">{{ publication.description }}</p>
             <!-- Publication Links. -->
             <div class="publication-links buttons field has-addons">
