@@ -28,7 +28,7 @@ description: >-
   I focus on reseraching challenges in content creation and consumption, aiming to define these problems and develop technologies to solve them.
   My ultimate research goal is to provide an enhanced content experience for people. If you'd like to talk with me, feel free to contact me (dawon.lee@kaist.ac.kr)!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "w-dlee.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://w-dlee.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username: 
 linkedin_username: w-dlee
@@ -39,6 +39,7 @@ google_analytics: G-MFWSBLRKG0
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap  
 
 sass:
   style: compact
