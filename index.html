@@ -53,6 +53,10 @@ layout: null
           <h1 class="title">
             <b>{{ site.name }}</b>
           </h1>
+          <p class="subtitle is-5">
+            {{ site.position }}<br>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </p>
           <div class="content has-text-justified">
             {{ site.description | markdownify }}
             <div class="buttons">
