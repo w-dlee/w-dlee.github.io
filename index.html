@@ -141,6 +141,31 @@ layout: null
                 {% assign author = site.data.authors[author_id] %}
                 <span class="author-block {% if author.is_me %}author-me{% endif %}">
                   {% if author.is_me %}
+                    {{ author.first_name | strip }}
+                    {% if author.middle_name %} {{ author.middle_name | strip }}{% endif %}
+                    {{ author.last_name | strip }}{% if corresponding_authors contains author_id %}*{% endif %}
+                  {% else %}
+                    <a href="{{ author.website }}">
+                      {{ author.first_name | strip }}
+                      {% if author.middle_name %} {{ author.middle_name | strip }}{% endif %}
+                      {{ author.last_name | strip }}
+                    </a>{% if corresponding_authors contains author_id %}*{% endif %}
+                  {% endif %}
+                  {% unless forloop.last %}, {% endunless %}
+                </span>
+              {% endfor %}
+            
+              {% if corresponding_authors %}
+                <span>(*Co-corresponding authors)</span>
+              {% endif %}
+            </div>
+
+            <!-- <div class="publication-authors">
+              {% assign corresponding_authors = publication.corresponding_authors %}
+              {% for author_id in publication.authors %}
+                {% assign author = site.data.authors[author_id] %}
+                <span class="author-block {% if author.is_me %}author-me{% endif %}">
+                  {% if author.is_me %}
                     {{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}{% if corresponding_authors contains author_id %}*{% endif %}
                   {% else %}
                     <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}</a>{% if corresponding_authors contains author_id %}*{% endif %}
@@ -152,7 +177,7 @@ layout: null
               {% if corresponding_authors %}
                 <span>(*Co-corresponding authors)</span>
               {% endif %}
-            </div>
+            </div> -->
 
             
             <div class="publication-venue">
