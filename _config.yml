@@ -23,9 +23,9 @@ name: Dawon Lee
 position: Postdoctoral Researcher, KAIST
 email: dawon.lee@kaist.ac.kr
 description: >- 
-  I develop content technologies that enhance both creative workflows and audience experiences, focusing on expressive, immersive, and personalized media.
+  I develop content technologies that enhance both creative workflows and user experiences, focusing on expressive, immersive, and personalized media.<br>
   
-  I am open to research collaborations with researchers, students, and industry partners, and welcome discussions on emerging content technologies. Please contact me via email!
+  I am open to research collaborations with researchers, students, and industry partners, and welcome discussions on emerging content technologies. Please email me.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://w-dlee.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
