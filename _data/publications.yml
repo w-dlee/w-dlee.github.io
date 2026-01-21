@@ -1,3 +1,18 @@
+- id: comvi
+  title: "ComVi: Context-Aware Optimized Comment Display in Video Playback"
+  venue: CHI 2026
+  description: ""
+  arxiv:
+  image: teaser_comvi.png 
+  image_mouseover: teaser_comvi.png 
+  authors:
+    - minsun
+    - dawon
+    - junyong
+  corresponding_authors:
+    - dawon
+    - junyong 
+
 - id: highlights
   title: "Generating Highlight Videos of a User-Specified Length using Most Replayed Data"
   venue: CHI 2025
@@ -12,7 +27,7 @@
     - junyong
   corresponding_authors:
     - dawon
-    - junyong 
+    - junyong
     
 - id: optisub
   title: "OptiSub: Optimizing Video Subtitle Presentation for Varied Display and Font Sizes via Speech Pause-Driven Chunking"
