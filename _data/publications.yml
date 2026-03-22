@@ -2,9 +2,10 @@
   title: "ComVi: Context-Aware Optimized Comment Display in Video Playback"
   venue: CHI 2026
   description: ""
+  project_page: https://w-dlee.github.io/comvi
   arxiv:
-  image: teaser_comvi.png 
-  image_mouseover: teaser_comvi.png 
+  image: teaser_comvi.jpg 
+  image_mouseover: teaser_comvi.jpg 
   authors:
     - minsun
     - dawon
